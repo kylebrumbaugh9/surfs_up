@@ -43,4 +43,4 @@ session.query(Measurement.date, Measurement.prcp).filter(Measurement.date.like('
 
 I think we should also look at each year specifically to see if the "cold years" were an anomaly. The majority of the temperatures are in the mid/low 70s but those min values are troubling me. I would want to look temperatures over time and see if there was a specific year where both June and December were cold so that I could chalk those minimum values up to chance or not. I would use a query like this:
 
-results = session.query(Measurement.date, Measurement.tobs).group_by(Measurement.date).all()
+session.query(Measurement.date, Measurement.tobs).group_by(Measurement.date).all()
